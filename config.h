@@ -5,8 +5,16 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+
+#define NEED_ZOOMABLE_FONT 0
+
+#if NEED_ZOOMABLE_FONT
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+#else
+static char *font = "dina-7:regular";
+#endif
+
+static int borderpx = 1;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -127,9 +135,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 108;
+unsigned int defaultbg = 235;
+static unsigned int defaultcs = 108;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -193,16 +201,16 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ ShiftMask|Mod1Mask,   XK_KP_Add,      zoom,           {.f = +1} },
+	{ ShiftMask|Mod1Mask,   XK_KP_Subtract, zoom,           {.f = -1} },
+	{ ShiftMask|Mod1Mask,   XK_KP_Divide,   zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ ShiftMask|Mod1Mask,   XK_K,           kscrollup,      {.i = -1} },
+	{ ShiftMask|Mod1Mask,   XK_J,           kscrolldown,    {.i = -1} },
 };
 
 /*
