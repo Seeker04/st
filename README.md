@@ -8,6 +8,7 @@ Fork of st with some patches applied and personal modifications.
 * [scrollback-mouse-altscreen](https://st.suckless.org/patches/scrollback/): scrollback with mouse wheel only
 * [alpha](https://st.suckless.org/patches/alpha/): allows changing background opacity
 * [alpha-focus-highlight](https://st.suckless.org/patches/alpha_focus_highlight/): distinct opacity for focused and unfocused windows
+* [anysize](https://st.suckless.org/patches/anysize/): eliminate surrounding window gaps by using up excess space
 
 ## Personal modifications
 
