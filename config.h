@@ -6,13 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 
-#define NEED_ZOOMABLE_FONT 0
-
-#if NEED_ZOOMABLE_FONT
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-#else
 static char *font = "dina-7:regular";
-#endif
 
 static int borderpx = 1;
 

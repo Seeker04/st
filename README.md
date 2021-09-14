@@ -30,13 +30,13 @@ Fork of st with some patches applied and personal modifications.
 
 ### Other
 
-* Font, depending on the value of NEED\_ZOOMABLE\_FONT (0 by default):
-  * 0: dina-7:regular (bitmap font, doesn't scale well)
-  * 1: Liberation Mono:pixelsize=12:antialias=true:autohint=true (default from upstream)
+* Font:
+  * Default: dina-7:regular (bitmap font, doesn't scale well, good for coding)
+  * For a zoomable font run with -f 'Liberation Mono:pixelsize=12:antialias=true:autohint=true'<br>(default from upstream, good for presentations)
 * Borderpixel: 1px
 * Focused/unfocused instances:
   * Bg color is the same: 235
   * 0% opacity for focused
   * 10% opacity for unfocused
-  * Note: these are just some baseline values, good values for these heavily rely on a lot of things, like fg color, the wallpaper in use, dircolors, etc.
+  * Note: these are just some baseline values, good values for these heavily rely on a lot of things:<br>fg color, wallpaper in use, dircolors,...
 
