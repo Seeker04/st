@@ -24,6 +24,9 @@ Fork of st with some patches applied and personal modifications.
 * Shift + Alt + Numpad Div: zoom reset
 * Shift + Alt + k: scroll up
 * Shift + Alt + j: scroll down
+* Shift + Alt + o: open $BROWSER at selected URL (linkgrabber.sh using dmenu)
+* Shift + Alt + y: yank selected URL to clipboard (linkgrabber.sh -yank using dmenu)
+* Shift + Alt + e: open screen's content in $EDITOR (editscreen.sh)
 
 ### Colors
 

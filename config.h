@@ -193,6 +193,18 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
+#define SCRIPTS_PATH_PREFIX "$HOME/Programs/shell/"
+
+/* Externalpipe commands */
+static char *openurlcmd[] = { "/bin/sh", "-c",
+	SCRIPTS_PATH_PREFIX "st-externalpipe/linkgrabber.sh", NULL };
+
+static char *yankurlcmd[] = { "/bin/sh", "-c",
+	SCRIPTS_PATH_PREFIX "st-externalpipe/linkgrabber.sh -yank", NULL };
+
+static char *editscreencmd[] = { "/bin/sh", "-c",
+	SCRIPTS_PATH_PREFIX "st-externalpipe/editscreen.sh", NULL };
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -209,6 +221,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask|Mod1Mask,   XK_K,           kscrollup,      {.i = -1} },
 	{ ShiftMask|Mod1Mask,   XK_J,           kscrolldown,    {.i = -1} },
+	{ ShiftMask|Mod1Mask,   XK_O,           externalpipe,   { .v = openurlcmd } },
+	{ ShiftMask|Mod1Mask,   XK_Y,           externalpipe,   { .v = yankurlcmd } },
+	{ ShiftMask|Mod1Mask,   XK_E,           externalpipe,   { .v = editscreencmd } },
 };
 
 /*
