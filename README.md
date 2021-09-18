@@ -19,9 +19,9 @@ Fork of st with some patches applied and personal modifications.
 
 ### Keymaps
 
-* Shift + Alt + Numpad Add: zoom in
-* Shift + Alt + Numpad Sub: zoom out
-* Shift + Alt + Numpad Div: zoom reset
+* Shift + Alt + l: zoom in
+* Shift + Alt + h: zoom out
+* Shift + Alt + r: zoom reset
 * Shift + Alt + k: scroll up
 * Shift + Alt + j: scroll down
 * Shift + Alt + o: open $BROWSER at selected URL (linkgrabber.sh using dmenu)
